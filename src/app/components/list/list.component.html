@@ -1,0 +1,5 @@
+<div class="list">
+  <ul>
+    <li [ngClass]="{'item': true, 'completed': todo.isCompleted}" *ngFor="let todo of todoList" (click)="onClick(todo)">{{ todo.text }}</li>
+  </ul>
+</div>
