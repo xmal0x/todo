@@ -6,14 +6,20 @@
       formControlName="text"
       class="form-field"
       placeholder="Enter todo..."
-      />
+    />
     <button
-    type="submit"
-    [disabled]="form.invalid"
-    class="btn btn-primary btn-inside uppercase"
-    >Add</button>
+      type="submit"
+      [disabled]="form.invalid"
+      class="btn btn-primary btn-inside uppercase"
+    >
+      Add
+    </button>
   </form>
-  <app-list [todoList]="todoList" *ngIf="!isLoading; else loadingBlock" (onClickEvent)="updateTask($event)"></app-list>
+  <app-list
+    [todoList]="todoList"
+    *ngIf="!isLoading; else loadingBlock"
+    (onClickEvent)="updateTask($event)"
+  ></app-list>
   <ng-template #loadingBlock>
     <app-loader></app-loader>
   </ng-template>
