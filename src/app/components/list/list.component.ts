@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+
 import { ToDo } from "src/app/services/todo.service";
-import { ReversePipe } from '../../pipes/ReversePipe.pipe';
 
 @Component({
   selector: 'app-list',

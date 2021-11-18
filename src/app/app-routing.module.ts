@@ -4,8 +4,8 @@ import { MainComponent } from "./components/main/main.component";
 import { AboutComponent } from "./components/about/about.component";
 
 const routes: Routes = [
-  { path: "", component: MainComponent },
-  { path: "about", component: AboutComponent }
+  { path: "", component: MainComponent, data: { animation: "MainPage" } },
+  { path: "about", component: AboutComponent, data: { animation: "AboutPage" }}
 ];
 
 @NgModule({

@@ -1,7 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-import { ToDo, TodoService } from "src/app/services/todo.service";
+
 import { finalize, delay } from "rxjs/operators";
+
+import { ToDo, TodoService } from "src/app/services/todo.service";
 
 @Component({
   selector: "app-main",
@@ -47,6 +49,16 @@ export class MainComponent implements OnInit {
     this.todoService.updateTodo(todo).subscribe(res => {
       console.log(res);
     });
+    const index = this.todoList.indexOf(todo);
+
+    if(index > -1) {
+      const t = this.todoList[index];
+      this.todoList.splice(index, 1);
+      console.log(t.isCompleted)
+      todo.isCompleted ? this.todoList.unshift(t) : this.todoList.push(t);
+
+
+    }
   }
 
   fetch() {
