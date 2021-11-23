@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 :root {
   --primary-color: #3aafa9;
@@ -11,7 +12,7 @@ html,
 body {
   background-color: var(--primary-color);
   color: var(--light-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Ubuntu', sans-serif;
   font-weight: bold;
   display: flex;
   flex-direction: column;
